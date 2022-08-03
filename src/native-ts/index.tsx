@@ -29,7 +29,6 @@ export const OtherFunc: React.FC = () => {
 const NativeTs: React.FC = () => {
   return (
     <div style={{ padding: 16 }}>
-      <div style={{ marginBottom: 20 }}>NativeTs</div>
       <Child gradeId={1} onOk={() => console.log('非空断言')} />
     </div>
   )
