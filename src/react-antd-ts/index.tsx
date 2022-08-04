@@ -10,6 +10,16 @@ const mgb: React.CSSProperties = {
 }
 
 const TypeTs: React.FC = () => {
+  /** @description 无需引入Project命名空间 可直接使用 */
+
+  const projectId: Project.IProps = {
+    projectId: 0,
+  }
+
+  const projectType: Project.ProjectType = 'author'
+
+  const projectIntro: ProjectContent = 'intro'
+
   // changeEvent =========================================
 
   /** @description 修饰事件对象 */
@@ -53,6 +63,8 @@ const TypeTs: React.FC = () => {
   const onFinish = () => {
     console.log(Instance.current?.getFieldsValue())
   }
+
+  ;<Form ref={Instance} onFinish={onFinish}></Form>
 
   // Antd Radio组件
 
