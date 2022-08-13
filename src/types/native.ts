@@ -110,8 +110,8 @@ type A3 = P<'x' | 'y'>
 
 // ! 以泛型传参(联合类型)的方式进入extends三元表达式中，会对类型进行拆分遍历逐一进行判断组成联合类型
 // step 解析
-// step 1 => 'x' extend 'x' ? string : number 得到string
-// step 2 => 'y' extend 'x' ? string : number 得到number
+// step 1 => 'x' extends 'x' ? string : number 得到string
+// step 2 => 'y' extends 'x' ? string : number 得到number
 // step 3 => 联合每个得到的类型 string | number
 
 // 接口继承
@@ -188,7 +188,7 @@ interface IPropsA {
 }
 
 // 第一个参数为需要处理的对象类型，第二个参数为对象类型的键(你不想要的)组成的联合类型
-/* type pickA = {
+/* type omitA = {
   teachModuleId: number
   hostId: number
 } */
@@ -209,7 +209,6 @@ type unionTypeA = 'gradeId' | 'productId' | 'teachModuleId' | 'hostId'
 type unionB = Exclude<unionTypeA, 'gradeId' | 'productId'>
 
 // * Record 声明对象类型
-
 interface IAnimals {
   eat: string
   move: () => void
@@ -230,6 +229,7 @@ const animals: Record<animalsType, IAnimals> = {
 }
 
 // * ReturnType 获取函数类型的返回值类型
+
 type func01 = (agencyId: number) => {
   gradeId: number
   productId: number
