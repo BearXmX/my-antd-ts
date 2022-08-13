@@ -208,6 +208,27 @@ type unionTypeA = 'gradeId' | 'productId' | 'teachModuleId' | 'hostId'
 // type unionB = 'teachModuleId' | 'hostId'
 type unionB = Exclude<unionTypeA, 'gradeId' | 'productId'>
 
+// * Record 声明对象类型
+
+interface IAnimals {
+  eat: string
+  move: () => void
+}
+
+type animalsType = 'dog' | 'cat'
+
+// 第一个参数为联合类型声明对象的键类型，第二个参数为声明对象的值类型
+const animals: Record<animalsType, IAnimals> = {
+  dog: {
+    eat: 'bone',
+    move: () => {},
+  },
+  cat: {
+    eat: 'fish',
+    move: () => {},
+  },
+}
+
 // * ReturnType 获取函数类型的返回值类型
 type func01 = (agencyId: number) => {
   gradeId: number

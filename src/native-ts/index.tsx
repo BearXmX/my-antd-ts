@@ -27,6 +27,18 @@ export const OtherFunc: React.FC = () => {
 }
 
 const NativeTs: React.FC = () => {
+  // xxx.tsx
+
+  /** @description 无需引入Project命名空间 可直接使用 */
+
+  const projectId: Project.IProps = {
+    projectId: 0,
+  }
+
+  const projectType: Project.ProjectType = 'author'
+
+  const projectIntro: ProjectContent = 'intro'
+
   return (
     <div style={{ padding: 16 }}>
       <div style={{ marginBottom: 20 }}>NativeTs</div>
