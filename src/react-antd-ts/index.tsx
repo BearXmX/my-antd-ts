@@ -56,9 +56,16 @@ const TypeTs: React.FC = () => {
     console.log(e.pageX)
   }
 
+  const input = useRef<HTMLInputElement>(null)
+
   // Antd Form组件
 
-  const Instance = useRef<FormInstance>(null)
+  const Instance = useRef<
+    FormInstance<{
+      name: string
+      select: number
+    }>
+  >(null)
 
   const onFinish = () => {
     console.log(Instance.current?.getFieldsValue())

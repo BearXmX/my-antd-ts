@@ -33,10 +33,27 @@ type keyofType = keyof {
   productId: number
 }
 
+interface Iprops1 {
+  gradeId: number
+  productId: number
+}
+
+type IProps2 = keyof Iprops1
+
 // type keyofType = 'gradeId' | 'productId'
-const keyofCase: keyofType = 'gradeId'
+
+const keyofCase: IProps2 = 'gradeId'
 
 // * typeof 获取一个对象类型的key组成联合类型
+
+const arr1 = [
+  {
+    label: 2,
+    value: 2,
+  },
+]
+
+type type2 = typeof arr1[0]
 
 const a = {
   gradeId: 0,
@@ -79,6 +96,14 @@ const AddNullInstance: AddNullCase = {
   gradeId: null,
   productId: null,
 }
+
+interface IProps3 {
+  gradeId: number
+  productId: number
+}
+
+// gradeId extends 'gradeId' | 'productId'
+type A4 = Pick<IProps3, 'gradeId'>
 
 // * extends 条件判断和接口继承
 
@@ -211,10 +236,10 @@ type unionB = Exclude<unionTypeA, 'gradeId' | 'productId'>
 // * Record 声明对象类型
 interface IAnimals {
   eat: string
-  move: () => void
+  move?: () => void
 }
 
-type animalsType = 'dog' | 'cat'
+type animalsType = 'dog' | 'cat' | 'st'
 
 // 第一个参数为联合类型声明对象的键类型，第二个参数为声明对象的值类型
 const animals: Record<animalsType, IAnimals> = {
@@ -226,11 +251,18 @@ const animals: Record<animalsType, IAnimals> = {
     eat: 'fish',
     move: () => {},
   },
+  st: {
+    eat: 'fish',
+    move: () => {},
+  },
 }
 
 // * ReturnType 获取函数类型的返回值类型
 
-type func01 = (agencyId: number) => {
+type func01 = (
+  agencyId: number,
+  g: string
+) => {
   gradeId: number
   productId: number
 }
@@ -250,7 +282,7 @@ type funcReturnType = ReturnType<func01>
 
 type paramsType = Parameters<func01>
 
-const paramsCase: paramsType = [888]
+const paramsCase: paramsType = [888, '2']
 
 // * Required 将对象类型的所有键改成必传项
 

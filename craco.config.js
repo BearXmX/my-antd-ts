@@ -15,7 +15,7 @@ module.exports = {
   webpack: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
-      'course': path.resolve(__dirname, 'src/course')
+      'jq': path.resolve(__dirname, 'src/jq')
     }
   },
   plugins: [
