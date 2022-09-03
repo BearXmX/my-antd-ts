@@ -17,3 +17,5 @@ declare type SomePartial<T, K extends keyof T, E = Exclude<keyof T, K>> = {
 }
 
 type T3 = SomePartial<T1, 'a' | 'b' | 'e'>
+
+declare type IsEqual<T, U> = T extends U ? true : false
