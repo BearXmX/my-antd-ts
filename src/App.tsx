@@ -1,11 +1,11 @@
 import { Button, Space } from 'antd'
 import React, { useState } from 'react'
-import { MyContext } from '../src/context'
-import { default as NativeTs } from '@/native-ts'
-import { default as ReactAntdTs } from '@/react-antd-ts'
-import { default as ClassComponent } from '@/class-component'
-import { default as JQCompoent } from '@/jq-component'
-import UtilsComponent from '@/utils-component'
+import { MyContext } from './components/context'
+import { default as NativeTs } from '@/components/native-ts'
+import { default as ReactAntdTs } from '@/components/react-antd-ts'
+import { default as ClassComponent } from '@/components/class-component'
+import { default as JQCompoent } from '@/components/jq-component'
+import { default as UtilsComponent } from '@/components/utils-component'
 
 import './index.css'
 
