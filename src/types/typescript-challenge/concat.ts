@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // TODO 用TS实现JS里的concat
 
 type Q9 = ['I']

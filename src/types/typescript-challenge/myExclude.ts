@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // TODO 实现Exclude工具类型
 
 type Q6 = 'a' | 'b' | 'c' | 'd' | 'e'

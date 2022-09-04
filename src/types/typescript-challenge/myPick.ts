@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // TODO 实现Pick工具类型
 
 interface Q1 {

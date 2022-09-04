@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // TODO 实现能取出Promise<T>的T类型
 
 type Q7 = Promise<string>

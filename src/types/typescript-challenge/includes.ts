@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // TODO 用TS实现JS里的includes
 
 // K extends T[number] ? true : false 部分条件不成立

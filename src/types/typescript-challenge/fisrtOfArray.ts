@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // TODO 实现能取出元祖的第一个类型的工具类型
 
 type Q4 = ['jack', 'lucy', 'john']

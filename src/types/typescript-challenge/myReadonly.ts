@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // TODO 实现Readonly工具类型
 
 interface Q2 {

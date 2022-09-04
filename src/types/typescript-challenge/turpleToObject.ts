@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // TODO 实现能将元祖转成对象类型的工具类型
 
 type Q3 = ['jack', 'lucy', 'john']

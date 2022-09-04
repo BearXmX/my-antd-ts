@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // TODO 实现能求出元祖长度的工具类型
 
 type Q5 = ['jack', 'lucy', 'john', 'steven']
