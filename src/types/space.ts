@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /** @description 正常的命名空间 */
 
 export namespace StudentSpace {
