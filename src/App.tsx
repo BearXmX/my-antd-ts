@@ -6,11 +6,12 @@ import { default as ReactAntdTs } from '@/components/react-antd-ts'
 import { default as ClassComponent } from '@/components/class-component'
 import { default as JQCompoent } from '@/components/jq-component'
 import { default as UtilsComponent } from '@/components/utils-component'
+import { default as UploadComponent } from '@/components/upload-component'
 
 import './index.css'
 
 const App: React.FC = () => {
-  const [status, setStatus] = useState<number>(4)
+  const [status, setStatus] = useState<number>(5)
   return (
     <div className="App">
       <Space>
@@ -30,6 +31,9 @@ const App: React.FC = () => {
           <Button type="link" onClick={() => setStatus(4)}>
             utils-component
           </Button>
+          <Button type="link" onClick={() => setStatus(5)}>
+            upload-component
+          </Button>
         </>
       </Space>
       <MyContext.Provider value={{ diyProps: 1 }}>
@@ -38,6 +42,7 @@ const App: React.FC = () => {
         {status === 2 && <ClassComponent />}
         {status === 3 && <JQCompoent />}
         {status === 4 && <UtilsComponent />}
+        {status === 5 && <UploadComponent />}
       </MyContext.Provider>
     </div>
   )
