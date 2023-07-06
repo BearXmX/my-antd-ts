@@ -36,7 +36,7 @@ const UploadComponent: React.FC = () => {
     const file = e.target.files![0]
 
     // 读一半
-    const newFile = new File([file.slice(0, file.size / 2)], 'img')
+    const newFile = new File([file.slice(0, file.size)], 'img')
 
     console.log(newFile)
 
